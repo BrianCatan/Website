@@ -1,18 +1,69 @@
----
-layout: default
----
+<head>
+	<title>///</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css" />
+</head>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<body>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<div id="container">
+	<div id="header">
+		<h3 style="display: inline;"> <span class="green">&raquo; Search</span></h3>
+		<form method="get" action="https://encrypted.google.com/search?q=">
+			<input type="text" name="q" \>
+		</form>
+	</div>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+	<div id="links">
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+		<div class="linksbox">
+			<h3><span class="green">&raquo; Reference</span></h3>
+			<a href="http://www.cplusplus.com/">C++</a>
+			<a href="http://pcpartpicker.com/">Hardware Prices</a>
+			<a href="http://www.bleepingcomputer.com/">Technical Support</a>
+			<a href="http://www.accuweather.com/en/us/missouri/weather-radar?play=1">Radar</a>
+		</div>
+
+		<div class="linksbox">
+			<h3><span class="green">&raquo; Work</span></span></h3>
+			<a href="https://connect.centene.com/vpn/index_modified.html">Centene Connect</a>
+			<a href="https://www.fidelity.com/?bar=p">Fidelity</a>
+			<a href="https://github.com/">GitHub</a>
+		</div>
+
+		<div class="linksbox">
+			<h3><span class="green">&raquo; Play</span></span></h3>
+			<a href="https://pay.reddit.com/">Reddit</a>
+			<a href="http://www.nexusmods.com/skyrimspecialedition/">The Nexus</a>
+		</div>
+
+		<div class="linksbox">
+			<h3> <span class="green">&raquo; Media</span></h3>
+			<a href="http://www.iptorrents.com/torrents/">IPTorrents</a>
+			<a href="https://apollo.rip/">Apollo</a>
+			<a href="http://alpha.wallhaven.cc/">Wallpapers</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+function GetClock(){
+d = new Date();
+nhour  = d.getHours();
+nmin   = d.getMinutes();
+nsec   = d.getSeconds();
+
+if(nmin <= 9) {nmin = "0" +nmin;}
+if(nsec <= 9) {nsec = "0" +nsec;}
+
+
+document.getElementById('clockbox').innerHTML=""+nhour+":"+nmin+":"+nsec+"";
+setTimeout("GetClock()", 1000);
+}
+window.onload=GetClock;
+</script>
+<div id="clockbox" style="font:80pt Helvetica Neue; font-weight: 100; color: rgba(255,255,255,0.35);text-align: center;"></div>
+
 </div>
+</body>
+</html>
